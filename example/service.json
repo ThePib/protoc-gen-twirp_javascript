@@ -1,0 +1,66 @@
+{
+  "nested": {
+    "twirpjs": {
+      "nested": {
+        "example": {
+          "options": {
+            "go_package": "github.com/ThePib/protoc-gen-twirp_javascript/example"
+          },
+          "nested": {
+            "DieRoller": {
+              "methods": {
+                "Roll": {
+                  "requestType": "google.protobuf.Empty",
+                  "responseType": "RollResult"
+                }
+              }
+            },
+            "Echoer": {
+              "methods": {
+                "Echo": {
+                  "requestType": "EchoRequest",
+                  "responseType": "EchoResponse"
+                }
+              }
+            },
+            "RollResult": {
+              "fields": {
+                "number": {
+                  "type": "int32",
+                  "id": 1
+                }
+              }
+            },
+            "EchoRequest": {
+              "fields": {
+                "speech": {
+                  "type": "string",
+                  "id": 1
+                }
+              }
+            },
+            "EchoResponse": {
+              "fields": {
+                "echoedSpeech": {
+                  "type": "string",
+                  "id": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "google": {
+      "nested": {
+        "protobuf": {
+          "nested": {
+            "Empty": {
+              "fields": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}

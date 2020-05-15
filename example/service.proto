@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package twirpjs.example;
+
+option go_package = "github.com/ThePib/protoc-gen-twirp_javascript/example";
+
+import "google/protobuf/empty.proto";
+
+service DieRoller {
+    rpc Roll(google.protobuf.Empty) returns (RollResult);
+}
+
+service Echoer {
+    rpc Echo(EchoRequest) returns (EchoResponse);
+}
+
+message RollResult {
+    int32 number = 1;
+}
+
+message EchoRequest {
+    string speech = 1;
+}
+
+message EchoResponse {
+    string echoed_speech = 1;
+}
